@@ -83,11 +83,14 @@ const PropertyDetail = () => {
               <span>{property.location}</span>
             </div>
             <div className="flex items-center gap-4 mb-4">
-              <div className="flex items-center gap-1">
+              <button 
+                onClick={() => navigate(`/reviews/${id}`)}
+                className="flex items-center gap-1 hover:opacity-80 transition-opacity"
+              >
                 <Icon name="Star" size={18} className="text-yellow-500 fill-yellow-500" />
                 <span className="font-semibold">{property.rating}</span>
                 <span className="text-sm text-muted-foreground">({property.reviews} отзывов)</span>
-              </div>
+              </button>
             </div>
           </div>
 

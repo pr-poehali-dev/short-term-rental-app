@@ -11,6 +11,7 @@ const Profile = () => {
 
   const menuItems = [
     { icon: "User", label: "Личные данные", path: "/profile/edit" },
+    { icon: "Building2", label: "Кабинет собственника", path: "/auth?type=owner" },
     { icon: "CreditCard", label: "Способы оплаты", path: "/profile/payment" },
     { icon: "Bell", label: "Уведомления", path: "/settings" },
     { icon: "Shield", label: "Безопасность", path: "/profile/security" },
