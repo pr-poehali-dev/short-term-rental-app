@@ -95,7 +95,7 @@ const PropertyDetail = () => {
           </div>
 
           <Card className="p-4 bg-primary/5 border-primary/20">
-            <div className="flex items-end justify-between">
+            <div className="flex items-end justify-between mb-3">
               <div>
                 <p className="text-sm text-muted-foreground mb-1">Стоимость</p>
                 <div className="flex items-end gap-2">
@@ -110,6 +110,14 @@ const PropertyDetail = () => {
                 <Icon name="ArrowRight" size={18} className="ml-2" />
               </Button>
             </div>
+            <Button 
+              variant="outline" 
+              className="w-full"
+              onClick={() => navigate(`/chat?propertyId=${property.id}&ownerId=owner1`)}
+            >
+              <Icon name="MessageCircle" size={18} className="mr-2" />
+              Задать вопрос собственнику
+            </Button>
           </Card>
 
           <div>
