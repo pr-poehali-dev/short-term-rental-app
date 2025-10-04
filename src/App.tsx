@@ -17,6 +17,9 @@ import Reviews from "./pages/Reviews";
 import Dashboard from "./pages/owner/Dashboard";
 import PropertyEdit from "./pages/owner/PropertyEdit";
 import PropertyCalendar from "./pages/owner/PropertyCalendar";
+import Notifications from "./pages/owner/Notifications";
+import Payment from "./pages/Payment";
+import PaymentSuccess from "./pages/PaymentSuccess";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +45,9 @@ const App = () => (
           <Route path="/owner/dashboard" element={<Dashboard />} />
           <Route path="/owner/property/:id/edit" element={<PropertyEdit />} />
           <Route path="/owner/property/:id/calendar" element={<PropertyCalendar />} />
+          <Route path="/owner/notifications" element={<Notifications />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/payment/success" element={<PaymentSuccess />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

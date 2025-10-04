@@ -103,8 +103,16 @@ const Dashboard = () => {
               <p className="text-sm text-muted-foreground">Управляйте своими объектами</p>
             </div>
             <div className="flex items-center gap-2">
-              <Button variant="outline" size="icon">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="relative"
+                onClick={() => navigate("/owner/notifications")}
+              >
                 <Icon name="Bell" size={20} />
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-destructive text-destructive-foreground rounded-full text-xs flex items-center justify-center">
+                  3
+                </span>
               </Button>
               <Button variant="outline" onClick={() => navigate("/profile")}>
                 <Icon name="User" size={18} className="mr-2" />

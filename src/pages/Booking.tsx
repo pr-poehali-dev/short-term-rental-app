@@ -30,8 +30,8 @@ const Booking = () => {
   const finalTotal = totalPrice + serviceFee;
 
   const handleBooking = () => {
-    alert('Бронирование успешно оформлено!');
-    navigate('/bookings');
+    const bookingId = `BR-${Date.now()}`;
+    navigate(`/payment?bookingId=${bookingId}&amount=${finalTotal}`);
   };
 
   return (
@@ -182,10 +182,11 @@ const Booking = () => {
             disabled={!checkIn || !checkOut || nights <= 0}
             onClick={handleBooking}
           >
-            Забронировать за {finalTotal.toLocaleString('ru-RU')} ₽
+            <Icon name="CreditCard" size={18} className="mr-2" />
+            Перейти к оплате {finalTotal.toLocaleString('ru-RU')} ₽
           </Button>
           <p className="text-xs text-center text-muted-foreground mt-2">
-            С вас пока ничего не будет списано
+            Безопасная оплата через систему МИР
           </p>
         </div>
       </div>
